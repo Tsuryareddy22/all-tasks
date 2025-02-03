@@ -8,6 +8,7 @@
     height: 300px;
     text-align: left;
     padding: 10px;
+    box-sizing: border-box;
 }
 .b{
     margin: 15px 10px 1px 15px;
@@ -20,7 +21,7 @@
     justify-content: center;
     text-align: left;
     padding: 10px;
-    
+    box-sizing: border-box;
 }
 .c{
     margin: 10px 20px 70px 35px;
@@ -32,6 +33,7 @@
     height: 120px;
     justify-content: center;
     padding: 10px;
+    box-sizing: border-box;
 }
 .d{
     margin: 20px 30px 10px 55px;
@@ -43,5 +45,6 @@
     height: 50px;
     justify-content: center;
     align-content: center;
+    box-sizing: border-box;
     
 }
