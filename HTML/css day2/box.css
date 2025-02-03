@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 .b{
-    margin: 15px 10px 1px 15px;
+    margin: 15px 10px 1px 30px;
     border: 1%;
     border-color: black;
     border-style: solid;
@@ -24,7 +24,7 @@
     box-sizing: border-box;
 }
 .c{
-    margin: 10px 20px 70px 35px;
+    margin: 10px 20px 70px 40px;
     border: 1%;
     border-color: black;
     border-style: dashed;
@@ -36,13 +36,13 @@
     box-sizing: border-box;
 }
 .d{
-    margin: 20px 30px 10px 55px;
+    margin: 10px 30px 30px 50px;
     border: 1%;
     border-color: black;
     border-style: solid;
     width: 70%;
     background-color: whitesmoke;
-    height: 50px;
+    height: 40px;
     justify-content: center;
     align-content: center;
     box-sizing: border-box;
