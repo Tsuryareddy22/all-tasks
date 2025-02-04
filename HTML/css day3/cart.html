@@ -68,6 +68,30 @@ display: block;
     gap: 60px;
     flex-wrap: wrap;
    }
+   @media (max-width: 768px) {
+    .a {
+        width: 45%; /* Adjust width of product boxes */
+    }
+    .image {
+        width: 80%; /* Adjust image size */
+    }
+    .container {
+        gap: 20px; /* Smaller gap on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .a {
+        width: 100%; /* Full width for each product box */
+    }
+    .image {
+        width: 100%; /* Ensure the image fits well */
+    }
+    .container {
+        gap: 10px; /* Even smaller gap for mobile screens */
+    }
+}
+
   
     </style>
 
