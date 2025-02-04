@@ -44,26 +44,26 @@
     box-sizing: border-box;
     
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .a {
-        width: 100%;
+        width: auto;
         height: auto;
-        margin: 5px;
+        margin: auto;
     }
     .b {
-        width: 105%;
+        width: auto;
         height: auto;
-        margin: 5px;
+        margin: auto;
     }
     .c {
-        width: 100%;
+        width:auto;
         height: auto;
-        margin: 5px;
+        margin: auto;
     }
     .d {
-        width: 95%;
+        width: auto;
         height: auto;
-        margin: 5px;
+        margin:auto;
     }
 }
 @media (max-width: 1024px) {
