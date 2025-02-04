@@ -3,44 +3,44 @@
     border: 1%;
     border-style: dashed;
     border-color: black;
-    width: 40%;
+    width: 25%;
     background-color: rgb(207, 203, 196);
-    height: 300px;
+    height: 150px;
     text-align: left;
-    padding: 10px;
+    padding: 5px;
     box-sizing: border-box;
 }
 .b{
-    margin: 15px 10px 1px 35px;
+    margin: 5px 10px 1px 35px;
     border: 1%;
     border-color: black;
     border-style: solid;
-    width: 90%;
+    width: 80%;
     background-color: red;
-    height: 200px;
+    height: 100px;
     text-align: left;
-    padding: 10px;
+    padding: 5px;
     box-sizing: border-box;
 }
 .c{
-    margin: 10px 20px 70px 40px;
+    margin: 5px 20px 10px 40px;
     border: 1%;
     border-color: black;
     border-style: dashed;
-    width: 80%;
+    width: 70%;
     background-color: chartreuse;
-    height: 120px;
-    padding: 10px;
+    height: 50px;
+    padding: 2px;
     box-sizing: border-box;
 }
 .d{
-    margin: 10px 30px 30px 50px;
+    margin: -2px 30px 30px 50px;
     border: 1%;
     border-color: black;
     border-style: solid;
-    width: 70%;
+    width: 40%;
     background-color: whitesmoke;
-    height: 40px;
+    height: 20px;
     box-sizing: border-box;
     
 }
