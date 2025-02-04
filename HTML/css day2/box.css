@@ -48,22 +48,22 @@
     .a {
         width: auto;
         height: auto;
-        margin: auto;
+        margin: none;
     }
     .b {
         width: auto;
         height: auto;
-        margin: auto;
+        margin: 5px;
     }
     .c {
         width:auto;
         height: auto;
-        margin: auto;
+        margin: 5px;
     }
     .d {
         width: auto;
         height: auto;
-        margin:auto;
+        margin:5px;
     }
 }
 @media (max-width: 1024px) {
