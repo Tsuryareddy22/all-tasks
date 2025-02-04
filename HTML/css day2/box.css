@@ -44,3 +44,47 @@
     box-sizing: border-box;
     
 }
+@media (max-width: 600px) {
+    .a {
+        width: 90%;
+        height: auto;
+        margin: 5px;
+    }
+    .b {
+        width: 95%;
+        height: auto;
+        margin: 5px;
+    }
+    .c {
+        width: 90%;
+        height: auto;
+        margin: 5px;
+    }
+    .d {
+        width: 85%;
+        height: auto;
+        margin: 5px;
+    }
+}
+@media (max-width: 1024px) {
+    .a {
+        width: 70%;
+        height: auto;
+        margin: 10px;
+    }
+    .b {
+        width: 80%;
+        height: auto;
+        margin: 10px;
+    }
+    .c {
+        width: 75%;
+        height: auto;
+        margin: 10px;
+    }
+    .d {
+        width: 70%;
+        height: auto;
+        margin: 10px;
+    }
+}
