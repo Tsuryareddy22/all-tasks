@@ -3,7 +3,7 @@
     border: 1%;
     border-style: dashed;
     border-color: black;
-    width: 25%;
+    width: 20%;
     background-color: rgb(207, 203, 196);
     height: 150px;
     text-align: left;
@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 .b{
-    margin: 5px 10px 1px 35px;
+    margin: 5px 10px 1px 22px;
     border: 1%;
     border-color: black;
     border-style: solid;
@@ -23,7 +23,7 @@
     box-sizing: border-box;
 }
 .c{
-    margin: 5px 20px 10px 40px;
+    margin: 5px 20px 10px 30px;
     border: 1%;
     border-color: black;
     border-style: dashed;
@@ -34,11 +34,11 @@
     box-sizing: border-box;
 }
 .d{
-    margin: -2px 30px 30px 50px;
+    margin: -2px 30px 30px 30px;
     border: 1%;
     border-color: black;
     border-style: solid;
-    width: 40%;
+    width: 50%;
     background-color: whitesmoke;
     height: 20px;
     box-sizing: border-box;
