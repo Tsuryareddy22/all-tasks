@@ -1,84 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="device-width, initial-scale=1.0,user-scalable=no" >
-    <title>Document</title>
+    <title>boxmodel</title>
  <style>
-    .a{
-
-border: 1%;
-border-style: dashed;
-border-color: black;
-width: 20%;
-background-color: rgb(207, 203, 196);
-height: 25vh;
-text-align: left;
-padding: 5px;
-box-sizing: border-box;
+.a{
+    border: 1%;
+    border-style: dashed;
+    width: 30%;
+    height: 200px;
+    background-color:darkgray;
+    padding: 5px;
 }
 .b{
-margin: 1.5vh 1vh 1vh 4vh;
-border: 1%;
-border-color: black;
-border-style: solid;
-width: 80%;
-background-color: red;
-height: 15vh;
-text-align: left;
-padding: ;
-box-sizing: border-box;
+    border: 1%;
+    border-style: solid;
+    width: 80%;
+    height: 140px;
+    background-color: coral;
+    padding: 5px;
+    margin: 0px 0px 0px 32px ;
 }
 .c{
-margin: 0.5vh 1vh 1vh 4.5vh;
-border: 1%;
-border-color: black;
-border-style: dashed;
-width: 70%;
-background-color: chartreuse;
-height: 8vh;
-padding: 0;
-box-sizing: border-box;
+    border: 1%;
+    border-style: dashed;
+    width: 80%;
+    height: 80px;
+    background-color: darkkhaki;
+    padding: 5px;
+    margin: 0px 0px 0px 24px ; 
 }
 .d{
-margin: 0vh 1vh -1vh 5vh;
-border: 1%;
-border-color: black;
-border-style: solid;
-width: 50%;
-background-color: cornsilk;
-height: 3vh;
-box-sizing: border-box;
+    border: 1%;
+    border-style: solid;
+    width: 60%;
+    height: 30px;
+    background-color: brown;
+    padding: 4px;
+    margin: 0px 0px 0px 43px ; 
+    text-align: center;
 }
-@media (max-width: 600px) {
-            .a {
-                width: 90%;
-                height: auto;
-                margin: 5px;
-            }
-            .b {
-                width: 95%;
-                height: auto;
-                margin: 5px;
-            }
-            .c {
-                width: 90%;
-                height: auto;
-                margin: 5px;
-            }
-            .d {
-                width: 85%;
-                height: auto;
-                margin: 5px;
-            }
-        }
  </style>
 </head>
 <body>
-    <div class="a" style="font-size: 2vh;">margin
-        <div class="b" style="font-size: 2vh;">border 
-            <div class="c" style="font-size: 2vh;">padding 
-                <div class="d" style="font-size: 2vh;">CONTENT
+    <div class="a" style="font-size: 20px;">margin
+        <div class="b" style="font-size: 20px;">border 
+            <div class="c" style="font-size: 20px;">padding 
+                <div class="d" style="font-size: 20px;">content
                 </div>
                 </div>
              </div>
