@@ -46,22 +46,22 @@
 }
 @media (max-width: 600px) {
     .a {
-        width: 90%;
+        width: 100%;
         height: auto;
         margin: 5px;
     }
     .b {
-        width: 95%;
+        width: 105%;
         height: auto;
         margin: 5px;
     }
     .c {
-        width: 90%;
+        width: 100%;
         height: auto;
         margin: 5px;
     }
     .d {
-        width: 85%;
+        width: 95%;
         height: auto;
         margin: 5px;
     }
