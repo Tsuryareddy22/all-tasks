@@ -53,17 +53,17 @@
     .b {
         width: auto;
         height: auto;
-        margin: 5px;
+        margin-left: 10px;
     }
     .c {
         width:auto;
         height: auto;
-        margin: 5px;
+        margin-left: 10px;
     }
     .d {
         width: auto;
         height: auto;
-        margin:5px;
+        margin-left: 10px;
     }
 }
 @media (max-width: 1024px) {
