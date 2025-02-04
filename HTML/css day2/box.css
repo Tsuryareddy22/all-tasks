@@ -44,7 +44,7 @@
     box-sizing: border-box;
     
 }
-@media (max-width: 1000px) {
+@media (width: 400px) {
     .a {
         width: auto;
         height: auto;
