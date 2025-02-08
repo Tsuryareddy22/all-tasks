@@ -1,0 +1,78 @@
+.container{
+    border: 7px ;
+    border-style: solid;
+    border-color:rgb(35, 44, 44);
+    width: 23%;
+    height: 450px;
+    background-color:maroon;
+    border-radius: 12%;
+    margin: auto;
+    overflow: scroll;
+    scrollbar-width: none;
+    
+}
+.child1{
+    background-color:  aliceblue;
+    height: 40px;
+    width: 100%;
+    border-top-left-radius: 34px;
+    border-top-right-radius: 34px;
+    font-size: 18px; 
+    position: sticky;
+    display: flex;
+    top: 0;
+}
+.a{
+    background-color: white;
+    color: black;
+    font-size: 17px;
+    border: 2%;
+    width: 20%;
+    margin-left: 2%;
+   border-radius: 10px;
+   text-align: left;
+   padding: 5px;
+   height: 16px; margin-top: 2%;
+   font-family: 'Times New Roman', Times, serif;
+
+}
+.c{
+    background-color: white;
+    color: black;
+    font-size: 17px;
+    border: 2%;
+    width: 20%;
+    font-family: 'Times New Roman', Times, serif;
+   border-radius: 10px;
+   text-align: left;
+   padding: 5px;
+text-align: left;
+height: 16px;
+}
+.b{
+    background-color: khaki;
+    color: black;
+    font-size: 15px;
+    border: 2%;
+    width: 20%;
+    margin-left: 2%;
+   border-radius: 10px;
+   text-align: center;
+   padding: 5px;
+   margin: auto;
+   height: 10px;
+   position: sticky;
+   top: 50px;
+   mar
+
+}
+.child3{
+    background-color: aliceblue;
+    height: 28px;
+    width: 90%;
+    font-size: 18px; 
+    position: sticky;
+    display: flex;
+    bottom: 0;
+    
+}
