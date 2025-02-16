@@ -90,35 +90,89 @@
         gap: 60px;
         margin: auto;
     }
-    .container{
-        display: grid;
-        grid-template-columns: 34% 34% 32%;
-        margin-bottom: 20px;
-        position: sticky;
-        top: 0;
-        background-color: white;
-        font-size: 24px;
-    }
-    .head{
+    .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.nav-items {
+    display: flex;
+gap: 10px;
+   
+}
+.head1{
+    margin-left: 500px;
+}
+.head2{
+    margin-left: 500px;
+}
+    .head1{
         transition: 1s;
     }
-    .head:hover{
+    .head2{
+        transition: 1s;
+    }
+    .head1:hover{
         transform: scale(1.1);
         
     }
-    @media screen and (max-width: 768px) {
+    .head2:hover{
+        transform: scale(1.1);
+        
+    }
+    @media screen and (max-width: 320px) {
             .container4{
-                grid-template-columns: 30% 20% ;
+                grid-template-columns: auto ;
             }
-            
+            .container1{
+                grid-template-columns: 10fr;
+                margin: auto;
+            }
+            .container {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+    .nav-items {
+        display: none;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 15px;
+    }
+    .nav-items{
+        display: grid;
+        justify-content: center;
+        
+    }
+    .head1{
+    margin-left: 0px;
+}
+.head2{
+    margin-left: 0px;
+}
+           .iam{
+            width: 80%;
+            height: 30%;
+           } 
         }
+        
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="head" style="color: black; margin-left: 20px;"><i class="fa-solid fa-bars"></i></div>
-        <div class="head" style="margin-left: 200px;margin-top: 10px;">My Wine</div>
-        <div class="head" style="margin-left: 380px;margin-top: 10px;">Mail</div>
+        <div class="head menu-icon" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-items" id="navItems">
+            <div class="head2">My Wine</div>
+            <div class="head1">Mail</div>
+        </div>
     </div>
     <div class="container1">
         <div class="box box1"><img src="https://wikiliq.org/wp-content/uploads/2021/01/Beaulieu-Vineyard-Cabernet-Sauvignon-Napa-Valley.jpeg" alt="">
@@ -153,7 +207,7 @@
     </div>
     <center><div style="font-family: 'Times New Roman', Times, serif;font-size: 24px;letter-spacing: 5px;margin-bottom: 50px;margin-top: 40px;">About Me, The Wine Man</div></center>
     <div class="container3">
-       <center> <img src="https://as2.ftcdn.net/jpg/01/60/78/69/1000_F_160786928_HduIqOf1zbjSbJF4akSBHnwKyiNCf9vm.jpg"  alt="">
+       <center> <img class="iam" src="https://as2.ftcdn.net/jpg/01/60/78/69/1000_F_160786928_HduIqOf1zbjSbJF4akSBHnwKyiNCf9vm.jpg"  alt="">
        <div><h2 style="letter-spacing: 5px;margin-top: 40px;margin-bottom: 20px;">I am Who I Am!</h2></div>
     <div style="letter-spacing: 3px;margin-bottom: 40px;"><em>With Passion For Real, Good wine</em></div>
     <div style="letter-spacing: 3px;text-align: center; margin-top: 30px;width:80%;margin: auto;">Wine is an alcoholic drink made from fermented fruit. Yeast consumes the sugar in the fruit and converts it to ethanol and carbon dioxide, releasing heat in the process. Wine is most often made from grapes, and the term "wine" generally refers to grape wine when used without any qualification. Even so, wine can be made from a variety of fruit crops, including plum, cherry, pomegranate, blueberry, currant, and elderberry.</div>
