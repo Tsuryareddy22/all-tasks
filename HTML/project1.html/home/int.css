@@ -1,0 +1,24 @@
+.box{
+    display: flex;
+    width: 70%;
+    justify-self: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+img{
+    border-radius: 30px;
+    height: 45vh;
+    width: 35vw;}
+    span{
+        font-size: 35px;
+        padding: 10px;
+    }
+    #content{
+        padding: 10px 20px 0 20px;
+        text-align: justify;
+        font-size: 17px;
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 25px;
+    }
+    
