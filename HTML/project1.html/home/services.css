@@ -12,6 +12,14 @@ box-sizing: border-box;
     justify-content: space-between;
     padding: 40px 50px;
 }
+#foot{
+    color: black;
+    text-decoration: none;
+}
+#boxa{
+    text-decoration: none;
+    color: black;
+}
 .design{
     text-align: center;
     margin-top: 70px;

@@ -116,6 +116,18 @@ marquee{
 .projectlink1{
     transition: 1s;
     background-color: white;
+   
+}
+
+#con{
+    text-decoration: none;
+}
+#color{
+    color: black;
+    text-decoration: none;
+}
+#color:hover{
+    color: white;
 }
 .projectlink1:hover{
    background-color: black;
@@ -169,6 +181,9 @@ marquee{
     gap: 10px;
     padding: 10px;
     margin-top: 80px;
+}
+.con{
+    text-decoration: none;
 }
 
    .foot1{
@@ -245,6 +260,14 @@ margin-top: 20px;
 width: 10%;
 height: 10vh;
 margin-left: 50px;
+}
+#foot{
+    color: black;
+    text-decoration: none;
+}
+#boxa{
+    text-decoration: none;
+    color: black;
 }
 #foot1{
     text-align: start;

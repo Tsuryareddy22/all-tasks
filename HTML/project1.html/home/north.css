@@ -15,6 +15,14 @@ box-sizing: border-box;
 .head1{
     justify-self: center;color: #ca1f08;font-size: 18px;font-family: 'Times New Roman', Times, serif;font-weight: 50;word-spacing: 5px;text-transform: uppercase;
 }
+#foot{
+    color: black;
+    text-decoration: none;
+}
+#boxa{
+    text-decoration: none;
+    color: black;
+}
 li{
     color: black;
 }

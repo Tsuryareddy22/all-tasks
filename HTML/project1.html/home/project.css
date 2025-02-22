@@ -80,6 +80,14 @@ color: black;
 opacity: 1;
 animation: opacity 2s linear 0s 1 alternate forwards;
 }
+#foot{
+    color: black;
+    text-decoration: none;
+}
+#boxa{
+    text-decoration: none;
+    color: black;
+}
 @keyframes opacity {
     from{
         opacity: 0.4;

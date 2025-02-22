@@ -6,7 +6,6 @@
     
   
 }
-
 #surya{
     height: 7vh;
     margin-left: -100px;
@@ -131,14 +130,17 @@
     padding: 26px;
 }
 .con{
-    background-color: antiquewhite;
-    padding: 15px;
+    background-color: white;
+    padding: 8px;
     border-radius: 50px;
     border: 1px solid;
     opacity: 1;
     color: black;
- text-decoration: none;
+ text-decoration: none !important;
     transition: 1s;
+    width: 10vw;
+    height: 5vh;
+    text-align: center;
 }
 .con:hover{
 transform: scale(0.8);
