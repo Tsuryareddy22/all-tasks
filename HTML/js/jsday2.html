@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ //comparison operators //
+let a=20;
+let b=30;
+
+console.log(a==b);
+console.log(a===b);
+console.log(a!=b);
+console.log(a!==b);
+console.log(a>b);
+console.log(a<b);
+console.log(a>=b);
+console.log(a<=b);
+
+
+//even or odd//
+var b=+prompt("enter a number");
+
+let a=b<0?"negative":(b%2==0)?"even":"odd";
+console.log(a);
+
+
+//adult (18+) or a minor//
+var age=+prompt("enter your age");
+
+let a=age>=18?"adult":"minor";
+console.log(a);
+
+
+//Grade Classification//
+var score=+prompt("enter your score");
+
+let a=score>=90?"A grade":(score>=75)?"B grade":(score>=60)?"C grade":(score>=45)?"D grade":"F grade";
+console.log(a);
+
+
+// Temperature Check://
+var temp=+prompt("enter temperature");
+let a=temp>=30?"Hot":(temp>=20)?"warm":(temp>=10)?"cool":"cold";
+console.log(a);
+
+
+// Age Group//
+var age=+prompt("enter your age");
+let a=age>=65?"senior":(age>=20)?"adult":(age>=13)?"Teen":"child";
+console.log(a);
+    </script>
+</body>
+</html>

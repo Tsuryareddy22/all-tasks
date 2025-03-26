@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .class1{
+        background-color: blue;
+        font-size: 30px;
+    }
+    .class2{
+        background-color: brown;
+        font-size: 30px;
+        border-radius: 30px;
+    }
+    .toggle{
+background-color: black;
+color: white;
+font-size: 50px;
+text-transform: uppercase;
+    }
+</style>
+<body>
+    <button onclick="imgshow()">click</button>
+<button onclick="show()">class</button>
+<button onclick="toggle()">toggle</button>
+
+    <script>  
+let img1=document.createElement("img")
+img1.setAttribute("src","data:image/png;base64,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")
+
+
+
+let img2=document.createElement("img")
+img2.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfkMYb955fj7IRiw-8g6gmn5GoZzKni1Kv8g&s")
+
+document.body.append(img1) 
+flag=true
+
+function imgshow() {
+    if (flag) {
+        document.body.append(img1)
+    img1.style.display="none"
+    document.body.append(img2)  
+    img2.style.display="block"
+    flag=false
+}
+    else{
+        document.body.append(img1)
+    img1.style.display="block"
+    document.body.append(img2) 
+    img2.style.display="none"
+    
+    flag=true
+    }
+    
+} 
+
+var a=document.createElement("div")
+a.innerText="class"
+document.body.append(a)
+flag=true
+function show() {
+   if (flag){
+    a.classList.add("class1");
+    a.classList.remove("class2");
+    flag=false
+   }
+   else{
+    a.classList.remove("class1");
+    a.classList.add("class2");
+    flag=true
+   }
+}
+var b=document.createElement("div")
+b.innerText="toggle"
+document.body.append(b)
+function toggle() {
+    b.classList.toggle("toggle")
+}
+
+
+    </script>
+</body>
+</html>
