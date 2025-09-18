@@ -17,7 +17,7 @@ text-align: center;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
     transition: 1s;
     border-radius: 20px;
-    display: none;
+
   }
   img{
     height: 25vh; 
@@ -35,7 +35,7 @@ p{
     <script>
         let arr=[]
         async function getdetails() {
-            let data=await fetch("https://fakestoreapi.com/products")
+            let data=await fetch("https://server-4-2rfs.onrender.com/data")
             let res=await data.json()
             console.log(res);
            
@@ -79,9 +79,7 @@ container.append(product)
 document.body.append(container)
 
         }
-getdetails()
-
-        
+  getdetails()
     </script>
 </body>
 </html>

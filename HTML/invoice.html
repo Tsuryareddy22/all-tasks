@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Editable Invoice</title>
+
+<!-- Optional: simple fonts -->
+<style>
+  :root{
+    --accent:#0b72b9;
+    --muted:#666;
+    --border:#ccc;
+    --paper-width:800px;
+  }
+  body{ font-family: Arial, Helvetica, sans-serif; display:flex; justify-content:center; padding:20px; background:#f3f3f3; }
+  .sheet{ width:var(--paper-width); background:#fff; padding:22px; box-shadow:0 6px 18px rgba(0,0,0,.08); }
+  header{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+  .company{ font-weight:700; font-size:20px; }
+  .small{ color:var(--muted); font-size:12px; }
+  .logo{ width:95px; height:95px; background:#eee; display:flex; align-items:center; justify-content:center; border-radius:6px; font-size:12px; color:#666; }
+  .top-right{ text-align:right; min-width:220px; }
+  .box{ border:1px solid var(--border); padding:10px; border-radius:4px; }
+  .row{ display:flex; gap:12px; margin-top:10px; }
+  .col{ flex:1; }
+  .invoice-meta td{ padding:6px 8px; font-size:13px; }
+  table.items{ width:100%; border-collapse:collapse; margin-top:14px; }
+  table.items th, table.items td{ border:1px solid var(--border); padding:8px; font-size:13px; text-align:left; }
+  table.items th{ background:#fafafa; }
+  table.totals{ width:320px; float:right; border-collapse:collapse; margin-top:10px; }
+  table.totals td{ padding:6px 8px; border:1px solid var(--border); font-size:13px; }
+  .controls{ display:flex; gap:8px; margin-top:14px; }
+  button{ background:var(--accent); color:#fff; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; }
+  button.ghost{ background:#fff; color:var(--accent); border:1px solid var(--accent); }
+  .editable{ outline:none; }
+  input.num{ width:100px; border:none; font-size:13px; text-align:right; }
+  input.num:focus{ outline:1px dashed #aaa; }
+  .stamp{ width:120px; height:60px; border:1px dotted #bbb; text-align:center; padding:6px; font-size:12px; color:#666; }
+  .footer{ margin-top:24px; font-size:12px; color:var(--muted); }
+  .right-align{ text-align:right; }
+  /* Print sizing */
+  @media print {
+    body { background:white; }
+    .sheet { box-shadow:none; margin:0; }
+    .controls, .download-hint { display:none; }
+  }
+</style>
+</head>
+<body>
+  <div class="sheet" id="invoiceSheet">
+    <header>
+      <div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <div class="logo">LOGO</div>
+          <div>
+            <div class="company" contenteditable="true">TDR NEST FARM</div>
+            <div class="small editable" contenteditable="true">D. No.: 2-1-704/1/C, BTS Colony, Vikarabad, Telangana - 501101</div>
+            <div class="small editable" contenteditable="true">GSTIN: 36AUAPT8579P1ZH | Ph: 9177146638</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="top-right box">
+        <table class="invoice-meta">
+          <tr><td><strong>Invoice No.</strong></td><td><span contenteditable="true" class="editable">GP/25-26/0813</span></td></tr>
+          <tr><td><strong>Date</strong></td><td><span contenteditable="true" class="editable">04-Sep-25</span></td></tr>
+          <tr><td><strong>Mode</strong></td><td><span contenteditable="true" class="editable">Advance Payment</span></td></tr>
+          <tr><td><strong>Destination</strong></td><td><span contenteditable="true" class="editable">Vikarabad</span></td></tr>
+        </table>
+      </div>
+    </header>
+
+    <div class="row">
+      <div class="col box">
+        <div style="font-weight:700">Consignee (Ship to)</div>
+        <div contenteditable="true" class="editable">SRI RAGHAVENDRA AGENCIES<br>KERELLY, DHARUR, VIKARABAD - 501121<br>GSTIN/UIN: 36AUAPT8579P1ZH</div>
+      </div>
+      <div class="col box">
+        <div style="font-weight:700">Buyer (Bill to)</div>
+        <div contenteditable="true" class="editable">SRI RAGHAVENDRA AGENCIES<br>KERELLY, DHARUR, VIKARABAD - 501121</div>
+      </div>
+    </div>
+
+    <!-- Items table -->
+    <table class="items" id="itemsTable">
+      <thead>
+        <tr>
+          <th style="width:40px">Sl</th>
+          <th style="width:320px">Description of Goods</th>
+          <th style="width:110px">HSN/SAC</th>
+          <th style="width:100px">Quantity</th>
+          <th style="width:90px">Rate</th>
+          <th style="width:80px">Per</th>
+          <th style="width:90px">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td contenteditable="true" class="editable">CITRIC ACID MONO</td>
+          <td contenteditable="true" class="editable">29181400</td>
+          <td><input type="number" class="num" id="qty-1" value="100" min="0" step="0.01" onchange="recalc()" oninput="recalc()" /></td>
+          <td><input type="number" class="num" id="rate-1" value="70" min="0" step="0.01" onchange="recalc()" oninput="recalc()" /></td>
+          <td contenteditable="true" class="editable">KGS</td>
+          <td class="right-align" id="amount-1">7000.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Add/Remove -->
+    <div style="margin-top:8px;">
+      <button onclick="addRow()">+ Add item</button>
+      <button class="ghost" onclick="removeRow()">− Remove last</button>
+    </div>
+
+    <!-- Totals -->
+    <table class="totals" id="totals">
+      <tr>
+        <td>Taxable Value</td>
+        <td class="right-align" id="taxable">7000.00</td>
+      </tr>
+      <tr>
+        <td>CGST <input type="number" id="cgstRate" value="9" style="width:48px; font-size:12px; margin-left:6px;" onchange="recalc()" oninput="recalc()">%</td>
+        <td class="right-align" id="cgstAmt">630.00</td>
+      </tr>
+      <tr>
+        <td>SGST <input type="number" id="sgstRate" value="9" style="width:48px; font-size:12px; margin-left:6px;" onchange="recalc()" oninput="recalc()">%</td>
+        <td class="right-align" id="sgstAmt">630.00</td>
+      </tr>
+      <tr>
+        <td><strong>Total Tax</strong></td>
+        <td class="right-align" id="totTax">1260.00</td>
+      </tr>
+      <tr>
+        <td><strong>Grand Total</strong></td>
+        <td class="right-align" id="grandTotal">8260.00</td>
+      </tr>
+    </table>
+
+    <div style="clear:both"></div>
+
+    <div style="margin-top:12px;">
+      <div><strong>Amount Chargeable (in words):</strong></div>
+      <div id="amountWords" style="margin-top:6px; font-weight:600;">INR Eight Thousand Two Hundred Sixty Only</div>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; margin-top:18px;">
+      <div>
+        <div contenteditable="true" class="small editable" >Bank: CANARA BANK</div>
+        <div contenteditable="true" class="small editable" >A/C No: 30981400000545</div>
+        <div contenteditable="true" class="small editable" >Branch & IFS Code: KOMPALLY & CNRB0002854</div>
+      </div>
+
+      <div style="text-align:right">
+        <div class="stamp editable" contenteditable="true">Company Stamp / Signature</div>
+        <div class="small" style="margin-top:6px;">Authorised Signatory</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>Declaration: We declare that this invoice shows the actual price of the goods described and that all particulars are true and correct.</div>
+    </div>
+
+    <div class="controls">
+      <button onclick="recalc()">Recalculate</button>
+      <button onclick="window.print()" class="ghost">Print</button>
+      <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <div class="download-hint small" style="margin-top:8px;color:#444">Tip: in Print dialog choose "Save as PDF" to create a PDF. "Download PDF" uses a client-side PDF generator.</div>
+  </div>
+
+<!-- html2pdf (client-side PDF export) - CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script>
+  // Basic arithmetic & UI logic
+  function recalc(){
+    // Sum each amount cell (qty * rate)
+    const tbody = document.querySelector('#itemsTable tbody');
+    let taxable = 0;
+    [...tbody.rows].forEach((r, idx) => {
+      const qty = Number(r.querySelector('#qty-' + (idx+1)) ? r.querySelector('#qty-' + (idx+1)).value : r.querySelector('input[id^="qty-"]').value) || 0;
+      const rate = Number(r.querySelector('#rate-' + (idx+1)) ? r.querySelector('#rate-' + (idx+1)).value : r.querySelector('input[id^="rate-"]').value) || 0;
+      const amtCell = r.querySelector('[id^="amount-"]') || r.cells[r.cells.length-1];
+      const amt = +(qty * rate).toFixed(2);
+      if (!amtCell.id) {
+        // set id if missing
+        amtCell.id = 'amount-' + (idx+1);
+      }
+      amtCell.innerText = amt.toFixed(2);
+      taxable += amt;
+    });
+
+    taxable = +taxable.toFixed(2);
+    document.getElementById('taxable').innerText = taxable.toFixed(2);
+
+    const cgstRate = (Number(document.getElementById('cgstRate').value) || 0) / 100;
+    const sgstRate = (Number(document.getElementById('sgstRate').value) || 0) / 100;
+    const cgstAmt = +(taxable * cgstRate).toFixed(2);
+    const sgstAmt = +(taxable * sgstRate).toFixed(2);
+    const totalTax = +(cgstAmt + sgstAmt).toFixed(2);
+    const grand = +(taxable + totalTax).toFixed(2);
+
+    document.getElementById('cgstAmt').innerText = cgstAmt.toFixed(2);
+    document.getElementById('sgstAmt').innerText = sgstAmt.toFixed(2);
+    document.getElementById('totTax').innerText = totalTax.toFixed(2);
+    document.getElementById('grandTotal').innerText = grand.toFixed(2);
+
+    document.getElementById('amountWords').innerText = 'INR ' + toIndianCurrencyWords(grand) + ' Only';
+  }
+
+  // Add / remove row helpers
+  function addRow(){
+    const tb = document.querySelector('#itemsTable tbody');
+    const idx = tb.rows.length + 1;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${idx}</td>
+      <td contenteditable="true" class="editable">New Item</td>
+      <td contenteditable="true" class="editable">HSN</td>
+      <td><input type="number" class="num" id="qty-${idx}" value="0" min="0" step="0.01" onchange="recalc()" oninput="recalc()" /></td>
+      <td><input type="number" class="num" id="rate-${idx}" value="0" min="0" step="0.01" onchange="recalc()" oninput="recalc()" /></td>
+      <td contenteditable="true" class="editable">PCS</td>
+      <td class="right-align" id="amount-${idx}">0.00</td>
+    `;
+    tb.appendChild(tr);
+  }
+  function removeRow(){
+    const tb = document.querySelector('#itemsTable tbody');
+    if(tb.rows.length>1) { tb.deleteRow(-1); recalc(); }
+  }
+
+  // Convert number to words for Indian numbering style (up to crores)
+  function toIndianCurrencyWords(num) {
+    num = Math.round(num);
+    if(num===0) return 'Zero Rupees';
+    const words = ['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'];
+    const tens = ['','','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety'];
+
+    function twoDigit(n){
+      if(n<20) return words[n];
+      const t = Math.floor(n/10);
+      const r = n%10;
+      return tens[t] + (r? ' ' + words[r] : '');
+    }
+
+    function threeDigit(n){
+      const h = Math.floor(n/100);
+      const r = n%100;
+      return (h? words[h] + ' Hundred' + (r? ' ' : '') : '') + (r? twoDigit(r) : '');
+    }
+
+    const crore = Math.floor(num / 10000000);
+    num = num % 10000000;
+    const lakh = Math.floor(num / 100000);
+    num = num % 100000;
+    const thousand = Math.floor(num/1000);
+    const hundredPart = num % 1000;
+
+    let parts = [];
+    if(crore) parts.push(threeDigit(crore) + ' Crore');
+    if(lakh) parts.push(threeDigit(lakh) + ' Lakh');
+    if(thousand) parts.push(threeDigit(thousand) + ' Thousand');
+    if(hundredPart) parts.push(threeDigit(hundredPart));
+    return parts.join(' ') + ' Rupees';
+  }
+
+  // PDF download using html2pdf
+  function downloadPDF(){
+    const element = document.getElementById('invoiceSheet');
+
+    const opt = {
+      margin:       0.3,
+      filename:     'invoice.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2, useCORS: true },
+      jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+
+    // temporarily remove buttons from view for PDF capture
+    const controls = document.querySelectorAll('.controls, .download-hint');
+    controls.forEach(n => n.style.display = 'none');
+
+    html2pdf().from(element).set(opt).save().then(()=> {
+      // restore UI
+      controls.forEach(n => n.style.display = '');
+    }).catch((err) => {
+      controls.forEach(n => n.style.display = '');
+      alert('PDF generation failed: ' + err);
+    });
+  }
+
+  // Initialize
+  window.addEventListener('load', () => { recalc(); });
+
+</script>
+</body>
+</html>

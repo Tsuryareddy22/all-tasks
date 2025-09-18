@@ -1,0 +1,20 @@
+list1 = [153, 370, 9474, 154]
+
+
+def check_armstrong(input_num):
+    num1 = input_num
+    temp = num1
+    sum = 0
+    while temp > 0:
+        digit = temp % 10
+        sum += digit ** len(str(num1))
+        temp = temp // 10
+
+    if sum == num1:
+        print(num1, "Armstrong number")
+    else:
+        print(num1, "Armweak number")
+
+
+for i in list1:
+    check_armstrong(i)
