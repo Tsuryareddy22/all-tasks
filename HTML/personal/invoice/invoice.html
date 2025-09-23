@@ -14,6 +14,7 @@
     --paper-width:800px;
   }
   body{ font-family: Arial, Helvetica, sans-serif; display:flex; justify-content:center; padding:20px; background:#f3f3f3; }
+  #address{width: 40%;}
   .sheet{ width:var(--paper-width); background:#fff; padding:22px; box-shadow:0 6px 18px rgba(0,0,0,.08); }
   header{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
   .company{ font-weight:700; font-size:20px; }
@@ -47,14 +48,17 @@
 </style>
 </head>
 <body>
+
   <div class="sheet" id="invoiceSheet">
+    <div style="text-align: center;font-weight: bolder;font-size: 160%;font-family: Arial, Helvetica, sans-serif;">INVOICE</div>
     <header>
+      
       <div>
         <div style="display:flex;gap:10px;align-items:center">
          
           <div>
             <div class="company" >TDR NATURE NEST </div>
-            <div class="small editable" >D. No.: 2-1-704/1/C, BTS Colony, Vikarabad, Telangana - 501101</div>
+            <div class="small editable" id="address" >D. No.: 2-1-704/1/C, BTS Colony, Vikarabad, Telangana - 501101</div>
             <div class="small editable" >GSTIN: 36AUAPT8579p | Ph: 9177146638</div>
           </div>
         </div>
@@ -97,12 +101,12 @@
       <tbody>
         <tr>
           <td>1</td>
-          <td contenteditable="true" class="editable">CITRIC ACID MONO</td>
-          <td contenteditable="true" class="editable">29181400</td>
-          <td><input type="number" class="num" id="qty-1" value="100" min="0" step="0.01" onchange="recalc()" oninput="recalc()" /></td>
-          <td><input type="number" class="num" id="rate-1" value="70" min="0" step="0.01" onchange="recalc()" oninput="recalc()" /></td>
+          <td contenteditable="true" class="editable">XXXXXXX</td>
+          <td contenteditable="true" class="editable">XXXXXXX</td>
+          <td><input type="number" class="num" id="qty-1" value="0" min="0" step="0.01" onchange="recalc()" oninput="recalc()" /></td>
+          <td><input type="number" class="num" id="rate-1" value="0" min="0" step="0.01" onchange="recalc()" oninput="recalc()" /></td>
           <td contenteditable="true" class="editable">KGS</td>
-          <td class="right-align" id="amount-1">7000.00</td>
+          <td class="right-align" id="amount-1">0.00</td>
         </tr>
       </tbody>
     </table>
@@ -117,23 +121,23 @@
     <table class="totals" id="totals">
       <tr>
         <td>Taxable Value</td>
-        <td class="right-align" id="taxable">7000.00</td>
+        <td class="right-align" id="taxable">0.00</td>
       </tr>
       <tr>
         <td>CGST <input type="number" id="cgstRate" value="9" style="width:48px; font-size:12px; margin-left:6px;" onchange="recalc()" oninput="recalc()">%</td>
-        <td class="right-align" id="cgstAmt">630.00</td>
+        <td class="right-align" id="cgstAmt">0.00</td>
       </tr>
       <tr>
         <td>SGST <input type="number" id="sgstRate" value="9" style="width:48px; font-size:12px; margin-left:6px;" onchange="recalc()" oninput="recalc()">%</td>
-        <td class="right-align" id="sgstAmt">630.00</td>
+        <td class="right-align" id="sgstAmt">0.00</td>
       </tr>
       <tr>
         <td><strong>Total Tax</strong></td>
-        <td class="right-align" id="totTax">1260.00</td>
+        <td class="right-align" id="totTax">0.00</td>
       </tr>
       <tr>
         <td><strong>Grand Total</strong></td>
-        <td class="right-align" id="grandTotal">8260.00</td>
+        <td class="right-align" id="grandTotal">0.00</td>
       </tr>
     </table>
 
@@ -152,7 +156,7 @@
       </div>
 
       <div style="text-align:right">
-        <div class="stamp editable" >Company Stamp / Signature</div>
+        <div class="stamp editable" > For TDR Nature Nest </div>
         <div class="small" style="margin-top:6px;">Authorised Signatory</div>
       </div>
     </div>
