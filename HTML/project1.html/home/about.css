@@ -1,0 +1,292 @@
+body{
+    background-color: antiquewhite;
+}
+*{
+    padding: 0;
+    margin: 0;
+text-decoration: none;
+box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+}
+#foot{
+    color: black;
+    text-decoration: none;
+}
+#boxa{
+    text-decoration: none;
+    color: black;
+}
+.head1{
+    justify-self: center;color: #ca1f08;font-size: 18px;font-family: 'Times New Roman', Times, serif;font-weight: 50;word-spacing: 5px;text-transform: uppercase;text-decoration: underline;text-underline-offset: 10px;
+}
+.projectcon1{
+    text-align: center;
+    font-size: 65px;
+    width: 54%;
+    justify-self: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top:10px ;
+    padding: 5px 0;
+}
+.con2{
+    text-align: center;
+    font-size: 24px;
+    width: 54%;
+    justify-self: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top:10px ;
+    padding: 5px 0; 
+}
+.con3{
+    justify-self: center;color: #ca1f08;font-size: 40px;font-family: 'Times New Roman', Times, serif;font-weight: 500;word-spacing: 5px; padding: 50px 0;
+}
+.cont1{
+    background-color: antiquewhite;
+    width: 25%;
+    height: 80vh;
+    padding: 10px;
+   transition: 0.5s;
+}
+.cont1:hover{
+transform: scale(0.9);
+color: grey;
+}
+#img1{
+    width: 100%;
+    height: 75vh;
+    border-radius: 20px;
+}
+.box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+.iddimg1{
+    height: 65vh; 
+    width: 20%;
+    margin-top: 55px;
+    border-radius: 20px;
+    
+}
+.iddimg2{
+    height: 60vh;
+    width: 20%;
+    border-radius: 20px;
+}
+.iddimg3{
+    height: 65vh; 
+    width: 20%;
+    margin-top: 55px;
+    border-radius: 20px;
+}
+.iddimg4{
+    height: 60vh;
+    width: 20%;
+    border-radius: 20px;
+}
+.foot1{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+   }
+   .downimg{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+    margin-top: 80px;
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin-top: 75px;
+    font-size: 1.2rem;
+    font-display: uppercase;
+}
+#fbox1{
+transition: 1s;
+}
+#fbox1:hover{
+    transform: scale(1.2);
+    color: firebrick;
+}
+#fbox2{
+    transition: 1s;
+    }
+    #fbox2:hover{
+        transform: scale(1.2);
+        color: firebrick;
+    }
+    #fbox3{
+        transition: 1s;
+        }
+        #fbox3:hover{
+            transform: scale(1.2);
+            color: firebrick;
+        }
+        #fbox4{
+            transition: 1s;
+            }
+            #fbox4:hover{
+                transform: scale(1.2);
+                color: firebrick;
+            }
+            #fbox5{
+                transition: 1s;
+                }
+                #fbox5:hover{
+                    transform: scale(1.2);
+                    color: firebrick;
+                }
+                #fbox6{
+                    transition: 1s;
+                    }
+                    #fbox6:hover{
+                        transform: scale(1.2);
+                        color: firebrick;
+                    }
+.footer2{
+   display: flex;
+   justify-content: space-between;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: black;
+}
+.footer3{
+    display: flex;
+    justify-content: space-between;
+padding: 10px;
+margin-top: 20px;
+}
+#fotimg{
+width: 10%;
+height: 10vh;
+margin-left: 50px;
+}
+@media screen and (width<680px) {
+    .head1{
+        text-decoration: underline; justify-self: center;color: #ca1f08;font-size: 16px;font-family: 'Times New Roman', Times, serif;font-weight: 50;}
+        .projectcon1{
+            text-align: center;
+            font-size: 24px;
+            width: 54%;
+            justify-self: center;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top:10px ;
+            padding: 5px 0;
+        }
+        .con2{
+            text-align: center;
+            font-size: 18px;
+            width: 90%;
+            justify-self: center;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top:10px ;
+            padding: 5px 0; 
+        }
+        .con3{
+            justify-self: center;color: #ca1f08;font-size: 34px;font-family: 'Times New Roman', Times, serif;font-weight: 500;word-spacing: 5px; padding: 50px 0;
+        }
+        .box{
+            display: block;
+            justify-content: center;
+            width: 100%;
+          }
+          #img1{
+            width: 100%;
+            height: 75vh;
+            border-radius: 20px;
+        }
+        .cont1{
+            background-color: antiquewhite;
+            width: 100%;
+            height: 80vh;
+            padding: 10px;
+           transition: 0.5s;
+           margin-bottom: 20px;
+        }
+        
+        .downimg{
+            display: block;
+            justify-content: center;
+            gap: 30px;
+            padding: 10px;
+            margin-top: 80px;
+        }
+        .iddimg1{
+            height: 65vh; 
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 20px;
+            
+        }
+        .iddimg2{
+            height: 60vh;
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+        .iddimg3{
+            height: 65vh; 
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 20px;
+        }
+        .iddimg4{
+            height: 60vh;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 20px;
+        }
+    /*footer*/
+.foot1{
+    display: unset;
+    padding: 5px;
+    }
+    ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: 1.2rem;
+    font-display: uppercase;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 40px;
+        }
+        .footer2{
+    display: unset;
+    font-size: 1.2rem;
+    color: black;
+    }
+    .foot3{
+    justify-self: right;
+    padding: 10px;
+    }
+    .footer3{
+    display: unset;
+    padding: 10px;
+    margin-top: 20px;
+    }
+    
+        #foot2{
+            text-align: right;
+            padding: 10px;
+        }
+        #fotimg{
+    width: 10%;
+    height: 10vh;
+    margin-left: 10px;
+    }
+    #foot1{
+    width: 50%;
+    text-align: left;
+    margin-left: 20px;
+    }
+    }

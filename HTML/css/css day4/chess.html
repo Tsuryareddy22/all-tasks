@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>chess board</title>
+    <style>
+       tr:nth-child(even) td:nth-child(odd),
+tr:nth-child(odd) td:nth-child(even) {
+    background-color:#3c582c;}
+
+    tr:nth-child(even) td:nth-child(even),
+tr:nth-child(odd) td:nth-child(odd) {
+    background-color:#81b34c;}
+    .a{
+        color: white;
+        font-size: 35px;
+        height: 70px;
+        text-align: center;
+    }
+    .b{
+        font-size: 40px;
+        height: 70px;
+        text-align: center;
+    
+}
+
+
+    #x:hover{
+        background-color:black;
+        color: blue;
+        font-size:50px ;
+        width: 75px    }
+
+        #y:hover{
+        background-color:black;
+        color: red;
+        font-size:50px ;
+        width: 75px    }
+        #o:hover{
+        background-color:black;
+        color: chartreuse;
+        font-size:50px ;
+        width: 75px    }
+        #z:hover{
+        background-color:black;
+        color:#81b34c;
+        font-size:50px ;
+        width: 75px    }
+        #p:hover{
+        background-color:black;
+        color:khaki;
+        font-size:50px ;
+        width: 75px    }
+        #s:hover{
+        background-color:white;
+        color: blue;
+        font-size:50px ;
+        width: 75px    }
+        #t:hover{
+        background-color:white;
+        color: red;
+        font-size:50px ;
+        width: 75px    }
+        #q:hover{
+        background-color:white;
+        color: chartreuse;
+        font-size:50px ;
+        width: 75px    }
+        #u:hover{
+        background-color:white;
+        color:#81b34c;
+        font-size:50px ;
+        width: 75px    }
+        #v:hover{
+        background-color:white;
+        color: grey;
+        font-size:50px ;
+        width: 75px    }
+        @media screen and (max-width: 480px) {
+    table {
+        width: 150%;
+        height: auto;
+    }
+    td {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <center>
+        <h3 style="margin-top: -5px;">CHESS BOARD</h3>
+        <table border="3% solid black" style="width: 50%;height: 600px;margin-top: -20px;">
+        <tr class="a">
+            <td id="z">&#9814</td>
+            <td id="p">&#9816</td>
+            <td id="z">&#9815</td>
+            <td id="o">&#9812</td>
+            <td id="o">&#9813</td>
+            <td id="p">&#9815</td>
+            <td id="z">&#9816</td>
+            <td id="p">&#9814</td>
+        </tr>
+        <tr class="a">
+            <td id="x">&#9817</td> <td id="y">&#9817</td> <td id="x">&#9817</td> <td id="y">&#9817</td> <td id="x">&#9817</td> <td id="y">&#9817</td> <td id="x">&#9817</td> <td id="y">&#9817</td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="b">
+            <td id="s">&#9823</td><td id="t">&#9823</td><td id="s">&#9823</td><td id="t">&#9823</td><td id="s">&#9823</td><td id="t">&#9823</td><td id="s">&#9823</td><td id="t">&#9823</td>
+
+        </tr>
+        <tr class="b">
+            <td id="u">&#9820</td>
+            <td id="v">&#9822</td>
+            <td id="u">&#9821</td>
+            <td id="q">&#9819</td>
+            <td id="q">&#9818</td>
+            <td id="v">&#9821</td>
+            <td id="u">&#9822</td>
+            <td id="v">&#9820</td>
+        </tr>
+    </table></center>
+    
+</body>
+</html>

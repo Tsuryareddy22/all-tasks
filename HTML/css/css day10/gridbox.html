@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=tab, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+           grid-template-columns: 100px 100px 100px  100px;
+            gap: 10px;
+            height: 50vh;
+            justify-content: center;
+        }
+        .child1{
+            background-color: blue;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            
+        }
+        .child2{
+            background-color: rgb(208, 255, 0);
+            grid-column-start: 2;
+            grid-column-end: 4;
+            
+        }
+        .child6{
+            background-color: rgb(255, 0, 0);
+        
+    }
+            
+         
+        .child4{
+            background-color: rgb(109, 29, 29);
+           
+        }
+        .child5{
+            background-color: rgb(161, 163, 149);
+           
+        }
+        .child7{
+            background-color: rgb(255, 0, 0);
+           
+        }
+        .child3{
+            background-color: rgb(208, 255, 0);
+            grid-column-start: 4;
+            grid-column-end: 5;
+          
+
+        }
+        .child8{
+            background-color: rgb(208, 255, 0);
+            grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 4;
+    grid-column-end: ;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+  <div class="child child1">box1</div>
+  <div class="child child2">box2</div>
+  <div class="child child3">box3</div>
+  <div class="child child4">box4</div>
+  <div class="child child5">box5</div>
+  <div class="child child6">box6</div>
+  <div class="child child7">box7</div>
+  <div class="child child8">box8</div>
+</div>
+</body>
+</html>

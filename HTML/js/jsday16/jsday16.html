@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>contact details</h2>
+<input type="text" id="name" placeholder="enter your name">
+<input type="number" id="number" placeholder="enter your mobile number">
+<button id="btn1">submit</button>
+<a href="userdata.html">stored data</a>
+<script>
+    let arr=[]
+    let btn=document.getElementById("btn1")
+    btn.addEventListener("click",funa)
+    function funa() {
+        let arr = JSON.parse(localStorage.getItem("user data")) || [];
+        let obj={
+        name:"",
+        contact:""
+    }
+       obj.name=document.getElementById ("name").value
+       obj.contact=document.getElementById ("number").value
+       arr.push(obj)
+console.log(arr);
+localStorage.setItem("user data",JSON.stringify(arr))
+    }
+    
+    
+    
+</script>  
+
+</body>
+</html>
