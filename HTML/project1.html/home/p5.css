@@ -1,0 +1,214 @@
+body{
+    background-color: antiquewhite;
+}
+*{
+    padding: 0;
+    margin: 0;
+text-decoration: none;
+box-sizing: border-box;
+}
+#foot{
+    color: black;
+    text-decoration: none;
+}
+#boxa{
+    text-decoration: none;
+    color: black;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+}
+/*footer*/
+.foot1{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+   
+   }
+ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin-top: 75px;
+    font-size: 1.2rem;
+    font-display: uppercase;
+}
+#fbox1{
+transition: 1s;
+}
+#fbox1:hover{
+    transform: scale(1.2);
+    color: firebrick;
+}
+#fbox2{
+    transition: 1s;
+    }
+    #fbox2:hover{
+        transform: scale(1.2);
+        color: firebrick;
+    }
+    #fbox3{
+        transition: 1s;
+        }
+        #fbox3:hover{
+            transform: scale(1.2);
+            color: firebrick;
+        }
+        #fbox4{
+            transition: 1s;
+            }
+            #fbox4:hover{
+                transform: scale(1.2);
+                color: firebrick;
+            }
+            #fbox5{
+                transition: 1s;
+                }
+                #fbox5:hover{
+                    transform: scale(1.2);
+                    color: firebrick;
+                }
+                #fbox6{
+                    transition: 1s;
+                    }
+                    #fbox6:hover{
+                        transform: scale(1.2);
+                        color: firebrick;
+                    }
+.footer2{
+   display: flex;
+   justify-content: space-between;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: black;
+}
+.footer3{
+    display: flex;
+    justify-content: space-between;
+padding: 10px;
+margin-top: 20px;
+}
+#fotimg{
+width: 10%;
+height: 10vh;
+margin-left: 50px;
+}
+#arrow{
+    padding: 20px;
+    color: black;
+    transition: 1s;
+}
+#arrow:hover{
+    transform: scale(0.9);
+}
+.cont1{
+    padding: 0 30px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+img{
+    width: 100%;
+    height: 140vh;
+    border-radius: 20px;
+}
+.conta1{
+    width: 48%;
+}
+#con1{
+    font-size: 60px;
+}
+.cona{
+    font-size: 17px;
+    text-align: justify;
+    padding: 20px 0 ;
+    line-height: 30px;
+}
+.conb{
+    font-size: 17px;
+    text-align: justify;
+    padding: 20px 0 ;
+    line-height: 30px;
+}
+#cond{
+    font-size: 17px;
+    text-align: justify;
+    padding: 20px 0 ;
+    line-height: 30px;  
+}
+@media screen and (width<680px) {
+
+
+/*media footer*/
+.foot1{
+    display: unset;
+    padding: 5px;
+    
+    }
+    ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: 1.2rem;
+    font-display: uppercase;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 40px;
+        }
+        .footer2{
+    display: unset;
+    font-size: 1.2rem;
+    color: black;
+    }
+    .foot3{
+    justify-self: right;
+    padding: 10px;
+    }
+    .footer3{
+    display: unset;
+    padding: 10px;
+    margin-top: 20px;
+    }
+    
+        #foot2{
+            text-align: right;
+            padding: 10px;
+        }
+        #fotimg{
+    width: 10%;
+    height: 10vh;
+    margin-left: 10px;
+    }
+    #foot1{
+    width: 40%;
+    text-align: justify;
+    margin-left: 20px;
+    }
+    .cont1{
+        padding: 0 30px;
+        display: block;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    img{
+        width: 100%;
+        height: 80vh;
+        border-radius: 20px;
+    }
+    .conta1{
+        width: 100%;
+    }
+    #con1{
+        font-size: 40px;
+        width: 100%;
+    }
+    .cona{
+        font-size: 17px;
+        text-align: justify;
+        padding: 20px 0 ;
+        line-height: 30px;
+    }
+}

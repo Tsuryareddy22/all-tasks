@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body>div{
+display: grid;
+grid-template-columns: auto auto auto;
+gap: 10px;
+text-align: center;
+
+  }
+  body>div>div{
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    transition: 1s;
+    border-radius: 20px;
+    display: none;
+  }
+  img{
+    height: 25vh; 
+  }
+body>div>div:hover{
+  transform: scale(0.9);
+}
+p{
+  font-weight: bold;
+  color: orange;
+}
+</style>
+<body>
+
+    <script>
+    let data=[
+    {
+      "id": 1,
+      "name": "Classic Combo",
+      "price": "$12.99",
+      "image": "https://www.yourcentralvalley.com/wp-content/uploads/sites/54/2025/01/Classic-Combo.jpg?w=900",
+      "includes": [
+        "Classic Cheeseburger",
+        "Regular Fries",
+        "Soft Drink (Medium)"
+      ],
+      "calories": 950,
+      "tags": ["best-seller", "value"]
+    },
+    {
+      "id": 2,
+      "name": "Bacon Lover's Combo",
+      "price": "$14.99",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCTSNXmbhpIooorDEYZ3welr-mUao_7drmug&s",
+      "includes": [
+        "Bacon Double Cheeseburger",
+        "Bacon Cheese Fries",
+        "Soft Drink (Large)"
+      ],
+      "calories": 1200,
+      "tags": ["premium", "high-protein"]
+    },
+    {
+      "id": 3,
+      "name": "Spicy Combo",
+      "price": "$13.49",
+      "image": "https://cdn.uengage.io/uploads/18085/image-186359-1713783475.jpeg",
+      "includes": [
+        "Spicy Jalapeño Burger",
+        "Cajun Fries",
+        "Iced Tea (Large)"
+      ],
+      "calories": 1100,
+      "tags": ["spicy", "bold-flavor"]
+    },
+    {
+      "id": 4,
+      "name": "Veggie Delight Combo",
+      "price": "$11.99",
+      "image": "https://cdn.dotpe.in/longtail/item_thumbnails/9145870/ZR9HRAlq-400-400.webp",
+      "includes": [
+        "Black Bean Veggie Burger",
+        "Sweet Potato Fries",
+        "Lemonade (Medium)"
+      ],
+      "calories": 850,
+      "tags": ["vegetarian", "healthy"]
+    }
+
+  ]
+
+  let container=document.createElement("div")
+  data.forEach((item) => {
+  let product=document.createElement("div")
+  product.style.display="block"
+
+  let head=document.createElement("h4")
+  head.innerText=item.name
+
+  let img=document.createElement("img")
+  img.src=item.image
+
+  let price=document.createElement("p")
+  price.innerText=item.price
+
+  let btn1=document.createElement("button")
+  btn1.innerText="delete"
+  btn1.addEventListener("click",function () {
+     product.style.display="none"
+  })
+ 
+product.append(head,img,price,btn1)
+container.append(product)
+
+
+  });
+  document.body.append(container)
+    </script>
+</body>
+</html>

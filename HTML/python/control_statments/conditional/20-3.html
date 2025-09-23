@@ -1,0 +1,182 @@
+<!--easy questions-->
+[1] --------------------------------------------
+a=-2
+if a>0:
+   print("+VE");
+elif a==0:
+    print("zero");
+else:
+      print("-ve");
+[2] --------------------------------------------
+a=4
+if a%2==0:
+   print("even");
+else:
+      print("odd");
+[3] --------------------------------------------
+age=20
+if age>=18:
+   print("u can vote");
+else:
+      print("u not eligible");
+[4] --------------------------------------------
+a=80;
+b=50;
+if a>b:
+   print(" a is greater than b");
+elif a==b:
+    print("a is equals to b");
+else:
+      print("b is greater than a");
+[5] --------------------------------------------
+score=20;
+if score>40:
+   print("pass");
+else:
+      print("fail");
+[6] --------------------------------------------
+day=int(input("enter number"));
+if day==1:
+   print("mon");
+elif day==2:
+    print("tue");
+elif day==3:
+    print("wed");
+elif day==4:
+    print("thu");
+elif day==5:
+    print("fri");
+elif day==6:
+    print("sat");
+elif day==7:
+    print("sun");
+else:
+      print("enter number between 1-7");
+[7] --------------------------------------------
+num1=float(input("enter first number"));
+num2=float(input("enter second number"));
+op=input("enter operater[add,sub,mul,div]");
+if op=='add':
+    print(num1+num2);
+elif op=='sub':
+    print(num1-num2);
+elif op=='mul':
+    print(num1*num2);
+elif op=='div':
+    if num2==0:
+        print("zero is not divsible ");
+    else:
+        print(num1/num2);
+else:
+    print("error")
+{another method}------------------
+num1=float(input("enter first number"));
+num2=float(input("enter second number"));
+op=input("enter operater[add{+},sub{-},mul{*},div{/}]");
+if op in["add","+"]:
+    print(num1+num2);
+elif op in["sub","-"]:
+    print(num1-num2);
+elif op in["mul","*"]:
+    print(num1*num2);
+elif op in["div","/"]:
+    if num2==0:
+        print("zero is not divsible ");
+    else:
+        print(num1/num2);
+else:
+    print("error")
+[8] --------------------------------------------
+month=int(input("enter number"));
+if month==1:
+   print("jan");
+elif month==2:
+    print("feb");
+elif month==3:
+    print("mar");
+elif month==4:
+    print("apr");
+elif month==5:
+    print("may");
+elif month==6:
+    print("jun");
+elif month==7:
+    print("jul");
+elif month==8:
+    print("aug");
+elif month==9:
+    print("sep");
+elif month==10:
+    print("oct");
+elif month==11:
+    print("nov");
+elif month==12:
+    print("dec");
+else:
+      print("enter number between 1-12");
+
+<!--medium questions-->
+[1] --------------------------------------------
+a=float(input("enter first number"));
+b=float(input("enter second number"));
+c=float(input("enter third number"));
+if a>b and a>c:
+    print(" a is greater number");
+elif b>a and b>c:
+        print(" b is greater number");
+elif c>a and c>b:
+        print(" c is greater number");
+elif a==b==c:
+        print(" all are equal");
+elif a==b and a!=c:
+   print(" a&b are equal");
+elif a==c and a!=b:
+   print(" a&c are equal");
+elif a!=b and a!=c and b==c:
+   print(" b&c are equal");
+else:
+      print("error");
+[2] --------------------------------------------
+year=int(input("enter year"))
+if year<=2000:
+    if year%400==0:
+        print("it is a leap year");
+    else:
+        print("it is not a leap year");
+elif year>2000:
+    if year%4==0:
+        print("it is a leap year");
+    else:
+        print("it is not a leap year");
+else:
+    print("error")
+[3] --------------------------------------------
+inp=input("enter charcter : ")
+if inp.lower() in["a", "e", "i", "o", "u"]:
+    print(inp,"it is a vowel");
+else:
+    print(inp,"it is not a  vowel");
+[4] --------------------------------------------
+inp=float(input("enter marks : "))
+if inp<70:
+    print("fail");
+elif inp<79:
+    print("grade c");
+elif inp<89:
+    print("grade b");
+else:
+    if inp<=100:
+        print("grade a");
+    else:
+         print("enter marks 100 or bellow");
+[5] --------------------------------------------                      
+a=float(input("enter first side  : "))
+b=float(input("enter second side  : "))
+c=float(input("enter third side  : "))
+if a+b>c and b+c>a and c+a>b:
+    print("it is a vaild triangle");
+else:
+    print("it is not a availd triangle");
+
+              
+              

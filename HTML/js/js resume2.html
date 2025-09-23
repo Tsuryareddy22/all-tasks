@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let bodya=document.createElement("div")
+
+        let heading=document.createElement("h1")
+        heading.innerHTML="<strong>RESUME</strong>"
+        heading.style.textAlign="center"
+
+        let name=document.createElement("h4")
+        name.innerHTML="<b>TEEGA SURYA PRAKASH REDDY</b>"
+
+
+        let cell=document.createElement("h4")
+        cell.innerHTML="<b>Cell:</b><span>9618616674</span>"
+
+        let mail=document.createElement("h4")
+        mail.innerHTML="<b>Gmail:</b>tsuryareddy22@gmail.com "
+
+
+        let line=document.createElement("hr")
+
+        let sub1=document.createElement("h3")
+        sub1.innerText="SUMMARY:"
+         sub1.style.textDecoration="underline"
+         sub1.style.color="green"
+
+       
+        let p1=document.createElement("p")
+        p1.innerText="Dynamic Electronics and communication Engineer with extensive experience in designing and manufacturing electronic products. Expertise in power electronics, encompassing both DC and AC systems. Proficient in analog and digital signal processing, with a proven track record in communications, radar, and power electronics applications. Adept at leveraging technical skills to deliver innovative solutions and drive project success."
+ p1.style.padding="5px"
+ p1.style.fontStyle="italic"
+  
+
+        let line1=document.createElement("hr")
+
+        let sub2=document.createElement("h3")
+        sub2.innerText="SKILLS:"
+        sub2.style.textDecoration="underline"
+         sub2.style.color="green"
+
+        let list1=document.createElement("ul")
+        
+        let lista=document.createElement("li")
+        lista.innerHTML="<b>TECHNICAL SKILLS:</b>Html,python "
+
+        let listb=document.createElement("li")
+        listb.innerHTML="<b>SOFT SKILLS:</b>ultitasking Abilities,Critical Thinking, Team Building,Data Entry "
+
+        let listc=document.createElement("li")
+        listc.innerHTML="<b>LANGUAGES:</b>Hindhi,English,Telugu"
+
+        list1.append(lista,listb,listc)
+        let line2=document.createElement("hr")
+
+        let sub3=document.createElement("h3")
+        sub3.innerText="CERTFICATIONS:"
+        sub3.style.textDecoration="underline"
+         sub3.style.color="green"
+
+        let list2=document.createElement("ul")
+        
+        let lista1=document.createElement("li")
+        lista1.innerHTML="Certificate of Python essential ,Introduction to cyber security,Data analytics essential by ‘Cisco networking academy’. "
+lista1.style.fontStyle="italic"
+        let lista2=document.createElement("li")
+        lista2.innerHTML="Diploma Industrial Training in NSIC (National Small Industries Corporations ). "
+lista2.style.fontStyle="italic"
+
+        list2.append(lista1,lista2)
+        let line3=document.createElement("hr")
+
+        let sub4=document.createElement("h3")
+        sub4.innerText="PROJECTS:"
+         sub4.style.textDecoration="underline"
+         sub4.style.color="green"
+
+        let sub4a=document.createElement("h4")
+        sub4a.innerText="Embedded Systems and Internet of Things (IoT) based Projects:"
+
+        let list3=document.createElement("ul")
+
+        let listb1=document.createElement("li")
+        listb1.innerHTML="Obstacle-Avoiding Robot Using Arduino "
+        listb1.style.fontWeight="900"
+
+        let p2=document.createElement("p")
+        p2.innerHTML="Designed and implemented a robotic system with obstacle detection and avoidance capabilities utilizing Arduino. "
+p2.style.fontStyle="italic"
+
+        let listb2=document.createElement("li")
+        listb2.innerHTML="Efficient Battery Management System for E-Vehicles Using IoT"
+ listb2.style.fontWeight="900"
+
+        let p3=document.createElement("p")
+        p3.innerHTML="Developed an IoT-based battery management system to optimize battery performance and lifespan in electric vehicles."
+p3.style.fontStyle="italic"
+
+        list3.append(listb1,p2,listb2,p3)
+        let line4=document.createElement("hr")
+
+        let sub5=document.createElement("h3")
+        sub5.innerText="EDUCATION:"
+         sub5.style.textDecoration="underline"
+         sub5.style.color="green"
+
+        let p4=document.createElement("p")
+        p4.innerHTML="<b>B.tech|JNTHU|</b>ECE|VJIT Collage,Aziznagar|2021-2024|"
+
+        let p5=document.createElement("p")
+        p5.innerHTML="<b>Diploma|SBTET|</b>ECE|TKR Collage,HYDERBAD|2018-2021|"
+
+        bodya.append(heading,name,cell,mail,line,sub1,p1,line1,sub2,list1,line2,sub3,list2,line3,sub4,sub4a,list3,line4,sub5,p4,p5)
+        console.log(bodya);
+
+        document.body.append(bodya)
+
+    </script>
+</body>
+</html>

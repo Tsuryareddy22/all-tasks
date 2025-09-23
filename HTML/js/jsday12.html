@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 2%;
+    }
+</style>
+<body>
+<h1>Basic level
+</h1>
+<h3> take prompt and Convert to Uppercase,lowerse,Reverse,count vowels</h3>
+    <form action="">
+        <input type="text" placeholder="enter sur name" id="sur">
+        <input type="text" placeholder="enter first name" id="name">
+        <button type="submit" id="btn1">submit</button>
+    </form>
+<div class="v1"></div>
+<div class="v2"></div>
+<div class="v3"></div>
+<div class="v4"></div>
+
+<h1>advanced</h1>
+<h3>Username Validation
+</h3>
+    <form action="">
+        <input type="text" placeholder="enter name" id="user">
+        <button type="submit" id="btn2">submit</button>
+    </form>
+    <h3> Email Formatter
+    </h3>
+    <form action="">
+        <input type="text" placeholder="enter firstname" id="mail1">
+        <input type="text" placeholder="enter secondname" id="mail2">
+        <button type="submit" id="btn3">submit</button>
+    </form>
+    <div class="v5"></div>
+<h3>Word Counter
+</h3>
+ <form action="">
+    <input type="text" placeholder="enter any sentence" id="count">
+    <button type="submit" id="btn4">submit</button>
+ </form>   
+<div class="v6"></div>
+<h3>Palindrome Checker
+</h3>
+    <form action="">
+        <input type="text" placeholder="enter an string" id="pal">
+        <button type="submit" id="btn5">submit</button>   
+    </form>
+    <div class="v7"></div>
+    <script>
+        let sur=document.getElementById("sur")
+        let name=document.getElementById("name")
+
+let btn1=document.getElementById("btn1")
+let v1=document.getElementsByClassName("v1")
+let v2=document.getElementsByClassName("v2")
+let v3=document.getElementsByClassName("v3")
+let v4=document.getElementsByClassName("v4")
+
+btn1.addEventListener("click",function (s) {
+    s.preventDefault()
+
+    let sur1=sur.value
+        let name1=name.value
+let arr1=sur1.toUpperCase()
+v1[0].innerHTML=arr1+ "{upper case of input}"
+let arr2=name1.toLowerCase()
+v2[0].innerHTML=arr2+ "{Lower case of input}"
+let arr3=name1.split("").reverse().join("")
+v3[0].innerHTML=arr3+ "{reverse of input}"
+let arr4len=name1.match(/a|e|i|o|u/gi).length
+let arr4=name1.match(/a|e|i|o|u/gi)+"@"+arr4len+"values"
+v4[0].innerHTML=arr4+ "{count of vowels}"
+console.log(sur1.toUpperCase());
+console.log(name1.toLowerCase());
+console.log(name1.split("").reverse().join(""));
+console.log(name1.match(/a|e|i|o|u/gi));
+})
+
+let user=document.getElementById("user")
+let btn2=document.getElementById("btn2")
+btn2.addEventListener("click",function (p) {
+    p.preventDefault()
+        let user1=user.value
+        console.log(user1);
+
+if (user1.length>5 && user1.length<=15) {
+    alert("vaild username")
+}
+
+else{
+    alert("not vaild username")
+}
+})
+
+let first=document.getElementById("mail1")
+let second=document.getElementById("mail2")
+let btn3=document.getElementById("btn3")
+btn3.addEventListener("click",function (u) {
+    u.preventDefault()
+
+    let firstname=first.value.toLowerCase()
+    let secondname=second.value.toLowerCase()
+let concat=firstname.concat(".").concat(secondname).concat("@gmail.com")
+let v5=document.getElementsByClassName("v5")
+v5[0].innerHTML=concat+ "{Email Formatter}"
+    console.log(concat);
+    
+
+})
+let count1=document.getElementById("count")
+let btn4=document.getElementById("btn4")
+btn4.addEventListener("click" ,function (c){
+    let a=count1.value
+    c.preventDefault()
+    let count=a.split(" ")
+    let v6=document.getElementsByClassName("v6")
+    let arr6=count.length+"words present in this sentence"
+v6[0].innerHTML=arr6+ "{word count}"
+    console.log(count.length,"words present in this sentence");
+})
+
+
+let pal=document.getElementById("pal")
+let btn5=document.getElementById("btn5")
+btn5.addEventListener("click",function (a) {
+    a.preventDefault()
+    let palvalue=pal.value
+let pal1=palvalue.split("").reverse().join("")
+let v7=document.getElementsByClassName("v7")
+console.log(pal1);
+
+if (pal1==palvalue) {
+    console.log("it is a palandrome");
+    v7[0].innerHTML="it is a palandrome"
+}
+else{
+    console.log("it is not a palandrome");
+    v7[0].innerHTML="it is not a palandrome"
+}
+})
+
+    </script>
+</body>
+</html>

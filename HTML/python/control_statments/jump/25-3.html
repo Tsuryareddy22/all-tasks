@@ -1,0 +1,29 @@
+<!--cls prblms-->
+{continue in neseted loop}
+for cmp in range(1,11):
+    for emp_id in range(1,31):
+        if cmp%2==1 and emp_id<16:
+            continue
+        print(cmp,emp_id)
+[if i use and all the even & odd numbers come according cond]
+[if i use or all the even numbers come according cond
+because the or cond satiesfies only both of either]
+--------------------------------
+{break in neseted loop}
+for cmp in range(1,11):
+    for emp_id in range(1,31):
+        print(cmp,emp_id)
+    if cmp==2:
+       break
+[it works on outer loop]
+for cmp in range(1,11):
+    for emp_id in range(1,31):
+        if emp_id==5:
+            break
+        print(cmp,emp_id)
+[it works on inner loop]
+for cmp in range(1,11):
+    for emp_id in range(1,31):
+        if cmp**5<135 or emp_id<15:
+            break
+        print(cmp,emp_id)

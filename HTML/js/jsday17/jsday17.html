@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      body>div{
+display: grid;
+grid-template-columns: auto auto auto;
+gap: 10px;
+text-align: center;
+
+  }
+      body>div>div{
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    transition: 1s;
+    border-radius: 20px;
+
+  }
+  img{
+    height: 25vh; 
+  }
+body>div>div:hover{
+  transform: scale(0.9);
+}
+p{
+  font-weight: bold;
+  color: orange;
+}
+</style>
+<body>
+<a href="cart.html"><h1>cart</h1></a>
+    <script>
+        let arr=[]
+        async function getdetails() {
+            let data=await fetch("https://server-4-2rfs.onrender.com/data")
+            let res=await data.json()
+            console.log(res);
+           
+            let container=document.createElement("div")
+  res.forEach((item) => {
+  let product=document.createElement("div")
+  product.style.display="block"
+
+  let head=document.createElement("h4")
+  head.innerText=item.title
+
+  let img=document.createElement("img")
+  img.src=item.image
+
+  let price=document.createElement("p")
+  price.innerText+="$"+item.price
+
+
+  
+  let btn1=document.createElement("button")
+  btn1.innerText="add to cart"
+  btn1.addEventListener("click",funa) 
+    function funa(){
+    let arr = JSON.parse(localStorage.getItem("cart")) || [];
+let obj={
+        titles:"",
+        prices:""
+    }
+       obj.titles=item.title
+       obj.prices=item.price
+arr.push(obj) 
+localStorage.setItem("cart",JSON.stringify(arr))
+console.log(arr);
+}
+
+product.append(head,img,price,btn1)
+container.append(product)
+
+});
+
+document.body.append(container)
+
+        }
+  getdetails()
+    </script>
+</body>
+</html>
